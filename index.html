@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Unity WebGL Player | Epic Of Decoy</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -33,10 +32,7 @@ function fitWindowCanvasSize(){
   if (isViewUnderBar){
     const barHeight = 18*2;            //下部のバーサイズ
     const barHeightMargin = 10*2;      //下部の追加余白サイズ
-	if (navigator.userAgent.match(/iPhone|Android.+Mobile/))
-		winHeight = winHeight - barHeight - barHeightMargin;
-	else
-		winHeight = winHeight;
+	winHeight = winHeight - barHeight - barHeightMargin;
   }
   const winWidth = window.innerWidth;
   const appWidth = "1920";
@@ -44,7 +40,6 @@ function fitWindowCanvasSize(){
   const scale = Math.min((winWidth / appWidth), (winHeight / appHeight));
   const fixWidth = (appWidth * scale);
   const fixHeight = (appHeight * scale);
-
   canvas.style.width = fixWidth + 'px';
   canvas.style.height = fixHeight + 'px';
 }
