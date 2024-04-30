@@ -28,13 +28,12 @@
 //ウインドウサイズに合わせキャンバスサイズを変更
 function fitWindowCanvasSize(){
   var pc_width = 1080;
-  var device = (screen.width < 600 ? 'sp' : 'pc');
   var winHeight = window.innerHeight;
   const isViewUnderBar = true;  //falseにすると下部のバーが画面外に表示
   if (isViewUnderBar){
     const barHeight = 18*2;            //下部のバーサイズ
     const barHeightMargin = 10*2;      //下部の追加余白サイズ
-	if(device='pc')
+	if (navigator.userAgent.match(/iPhone|Android.+Mobile/))
 		winHeight = winHeight - barHeight - barHeightMargin;
 	else
 		winHeight = winHeight;
