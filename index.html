@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Unity WebGL Player | Epic Of Decoy</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -115,7 +116,33 @@ function windowResizeEvent(){
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
+		var htmlElement = document.querySelector("html");
+		var bodyElement = document.querySelector("body");
+		var divElement = document.querySelector("div");
+		var canvasElement = document.querySelector("canvas");
 
+		// スタイルを適用
+		htmlElement.style.margin = "0";
+		htmlElement.style.padding = "0";
+		htmlElement.style.width = "100%";
+		htmlElement.style.height = "100%";
+
+		bodyElement.style.margin = "0";
+		bodyElement.style.padding = "0";
+		bodyElement.style.width = "100%";
+		bodyElement.style.height = "100%";
+
+		divElement.style.margin = "0";
+		divElement.style.padding = "0";
+		divElement.style.width = "100%";
+		divElement.style.height = "100%";
+
+		canvasElement.style.margin = "0";
+		canvasElement.style.padding = "0";
+		canvasElement.style.position = "absolute";
+		canvasElement.style.zIndex = "9";
+		canvasElement.style.width = "100%";
+		canvasElement.style.height = "100%";
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
