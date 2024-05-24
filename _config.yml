@@ -1,0 +1,11 @@
+# MIME types
+mime_types:
+  wasm: "application/wasm"
+  data: "application/octet-stream"
+  js: "application/javascript"
+
+# Content encoding
+content_encoding:
+  js: "gzip"
+  data: "gzip"
+  wasm: "gzip"
